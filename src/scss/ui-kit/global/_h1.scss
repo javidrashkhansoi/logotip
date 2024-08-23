@@ -1,0 +1,15 @@
+.h1 {
+  font-size: var(--h1-font-size-mobile, vw-mobile(36));
+  line-height: var(--h1-line-height, 1.2);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: $color-main-title;
+
+  @media (min-width: #{768 + 0.1px}) {
+    font-size: var(--h1-font-size-tablet, vw-tablet-2(48, 36));
+  }
+
+  @media (min-width: #{1024 + 0.1px}) {
+    font-size: vw-desktop(48);
+  }
+}

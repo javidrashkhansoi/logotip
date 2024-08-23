@@ -1,0 +1,57 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: vw-mobile(10);
+  font-family: $font-jost;
+  font-weight: 600;
+  font-size: vw-mobile(20);
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--logo-color, #{$color-black});
+
+  &:not(&--footer) {
+    @include prefers-reduced-motion {
+      transition-property: opacity;
+      transition-duration: 0.3s;
+    }
+
+    @include hover {
+      opacity: 0.75;
+    }
+  }
+
+  // .logo--footer
+  &--footer {
+    --logo-color: #{$color-white};
+    --logo-icon-background: #{$color-button-gradient};
+  }
+
+  @media (min-width: #{768 + 0.1px}) {
+    gap: vw-tablet(10);
+    font-size: vw-tablet(20);
+  }
+
+  @media (min-width: #{1024 + 0.1px}) {
+    gap: vw-desktop(10);
+    font-size: vw-desktop(20);
+  }
+
+  &::before {
+    content: "";
+    flex: 0 0 auto;
+    inline-size: vw-mobile(40);
+    aspect-ratio: 1 / 1;
+    font-size: 0;
+    background: var(--logo-icon-background, $color-accent);
+    border: 1px solid $color-accent;
+    border-radius: 50%;
+
+    @media (min-width: #{768 + 0.1px}) {
+      inline-size: vw-tablet(40);
+    }
+
+    @media (min-width: #{1024 + 0.1px}) {
+      inline-size: vw-desktop(40);
+    }
+  }
+}

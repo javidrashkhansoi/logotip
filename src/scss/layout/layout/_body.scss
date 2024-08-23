@@ -1,0 +1,15 @@
+body {
+  font-family: $font-consolas;
+  font-size: vw-mobile(20);
+  line-height: 1.3;
+  color: $color-text;
+  background-color: $color-background;
+
+  @media (min-width: #{768 + 0.1px}) {
+    font-size: vw-tablet(20);
+  }
+
+  @media (min-width: #{1024 + 0.1px}) {
+    font-size: vw-desktop(20);
+  }
+}

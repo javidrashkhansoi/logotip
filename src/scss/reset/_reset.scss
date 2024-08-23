@@ -1,0 +1,136 @@
+* {
+  -webkit-tap-highlight-color: transparent;
+
+  padding: 0;
+  margin: 0;
+  border: none;
+
+  &:not(body):has(> img, > svg) {
+    flex: 0 0 auto;
+    font-size: 0;
+  }
+
+  &,
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: none;
+  }
+}
+
+:any-link,
+a {
+  text-decoration: none;
+}
+
+input:focus-visible,
+:focus,
+:active {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--outline-color, currentColor);
+  outline-offset: 2px;
+
+  @include hover {
+    outline: none;
+  }
+}
+
+:disabled {
+  cursor: default;
+}
+
+::placeholder {
+  opacity: 1;
+}
+
+html,
+body {
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+
+  inline-size: 100%;
+  block-size: 100%;
+  font-size: 16px;
+  line-height: 1;
+}
+
+html {
+  @include prefers-reduced-motion {
+    scroll-behavior: smooth;
+  }
+}
+
+input,
+button,
+h3,
+h2,
+h1 {
+  font-weight: inherit;
+}
+
+input,
+button,
+h3,
+h2,
+h1 {
+  font-size: inherit;
+}
+
+::placeholder,
+input,
+button,
+a {
+  color: inherit;
+}
+
+input,
+button {
+  font-style: inherit;
+}
+
+button {
+  background: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+button {
+  font-family: inherit;
+  line-height: inherit;
+}
+
+button {
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+svg {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+input {
+  inline-size: 100%;
+}
+
+input {
+  display: block;
+  caret-color: currentColor;
+}

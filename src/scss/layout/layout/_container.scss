@@ -1,0 +1,11 @@
+.container {
+  padding-inline: vw-mobile(20);
+
+  @media (min-width: #{768 + 0.1px}) {
+    padding-inline: vw-tablet-2(110, 20);
+  }
+
+  @media (min-width: #{1024 + 0.1px}) {
+    padding-inline: vw-desktop(110);
+  }
+}

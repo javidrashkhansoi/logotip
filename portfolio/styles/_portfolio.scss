@@ -1,0 +1,259 @@
+.portfolios {
+  padding-block: vw-mobile(60) vw-mobile(40);
+
+  @media (min-width: #{768 + 0.1px}) {
+    padding-block: vw-tablet(40);
+  }
+
+  @media (min-width: #{1024 + 0.1px}) {
+    padding-block: vw-desktop(40);
+  }
+
+  // .portfolios__container
+  &__container {
+  }
+
+  // .portfolios__header
+  &__header {
+    display: flex;
+    gap: vw-mobile(24);
+    margin-block-end: vw-mobile(75);
+    padding-inline: vw-mobile(20);
+
+    @media (min-width: #{768 + 0.1px}) {
+      gap: vw-tablet(24);
+      margin-block-end: vw-tablet(60);
+      padding-inline: vw-tablet-2(100, 20);
+    }
+
+    @media (min-width: #{1024 + 0.1px}) {
+      gap: vw-desktop(24);
+      margin-block-end: vw-desktop(60);
+      padding-inline: vw-desktop(100);
+    }
+  }
+
+  // .portfolios__caption
+  &__caption {
+  }
+
+  // .portfolios__title
+  &__title {
+    &:not(:last-child) {
+      margin-block-end: vw-mobile(25);
+
+      @media (min-width: #{768 + 0.1px}) {
+        margin-block-end: vw-tablet(10);
+      }
+
+      @media (min-width: #{1024 + 0.1px}) {
+        margin-block-end: vw-desktop(10);
+      }
+    }
+  }
+
+  // .portfolios__text
+  &__text {
+    font-size: vw-mobile(16);
+
+    @media (min-width: #{768 + 0.1px}) {
+      font-size: vw-tablet(16);
+    }
+
+    @media (min-width: #{1024 + 0.1px}) {
+      font-size: vw-desktop(16);
+    }
+  }
+
+  // .portfolio__banner
+  &__banner {
+  }
+
+  // .portfolios__list
+  &__list {
+  }
+}
+
+.portfolios-banner {
+  display: flex;
+  align-items: center;
+  gap: vw-desktop(30);
+  padding-block: vw-desktop(20);
+  padding-inline: vw-desktop(30) vw-desktop(20);
+  border: 2px solid $color-border;
+  border-radius: vw-desktop(20);
+  backdrop-filter: blur(4px);
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+
+  // .portfolios-banner__text
+  &__text {
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    color: $color-black;
+  }
+
+  // .portfolios-banner__link
+  &__link {
+    --button-width: 300;
+    --button-height: 60;
+    --button-border-radius: 16;
+  }
+}
+
+.portfolios-list {
+  // .portfolios-list__item
+  &__item {
+    &:not(:last-child) {
+      margin-block-end: vw-mobile(40);
+
+      @media (min-width: #{768 + 0.1px}) {
+        margin-block-end: vw-tablet-2(60, 40);
+      }
+
+      @media (min-width: #{1024 + 0.1px}) {
+        margin-block-end: vw-desktop(60);
+      }
+    }
+  }
+}
+
+.portfolio {
+  display: grid;
+  gap: vw-mobile(40);
+
+  @media (min-width: #{768 + 0.1px}) {
+    grid-template-columns: 5.5fr 6fr;
+    gap: vw-tablet-2(60, 40);
+  }
+
+  @media (min-width: #{1024 + 0.1px}) {
+    gap: vw-desktop(60);
+  }
+
+  // .portfolio__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: vw-mobile(10);
+
+    @media (min-width: #{768 + 0.1px}) {
+      gap: vw-tablet(10);
+    }
+
+    @media (min-width: #{1024 + 0.1px}) {
+      gap: vw-desktop(10);
+    }
+  }
+
+  // .portfolio__link
+  &__link {
+    line-height: 1.2;
+    color: $color-link;
+
+    @include prefers-reduced-motion {
+      transition-property: opacity;
+      transition-duration: 0.3s;
+    }
+
+    @include hover {
+      opacity: 0.75;
+    }
+  }
+
+  // .portfolio__title
+  &__title {
+    font-size: vw-mobile(24);
+    color: $color-black;
+
+    @media (min-width: #{768 + 0.1px}) {
+      font-size: vw-tablet-2(36, 24);
+    }
+
+    @media (min-width: #{1024 + 0.1px}) {
+      font-size: vw-desktop(36);
+    }
+
+    a {
+      @include prefers-reduced-motion {
+        transition-property: opacity;
+        transition-duration: 0.3s;
+      }
+
+      @include hover {
+        opacity: 0.75;
+      }
+    }
+  }
+
+  // .portfolio__text
+  &__text {
+  }
+
+  // .portfolio__technologies
+  &__technologies {
+    margin-block-start: auto;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  // .portfolio__image
+  &__image {
+    border: 2px solid $color-border;
+    border-radius: vw-mobile(10);
+    overflow: hidden;
+
+    @media (min-width: #{768 + 0.1px}) {
+      border-radius: vw-tablet(10);
+    }
+
+    @media (min-width: #{1024 + 0.1px}) {
+      border-radius: vw-desktop(10);
+    }
+
+    img {
+      inline-size: 100%;
+    }
+  }
+}
+
+.portfolio-technologies {
+  // .portfolio-technologies__title
+  &__title {
+    margin-block-end: vw-desktop(10);
+  }
+
+  // .portfolio-technologies__list
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: vw-desktop(7);
+  }
+
+  // .portfolio-technologies__image
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    inline-size: vw-desktop(55);
+    aspect-ratio: 1 / 1;
+    font-size: 0;
+    background-color: $color-tech-icon;
+    border-radius: vw-desktop(10);
+    overflow: hidden;
+
+    img {
+      inline-size: calc(45 / 55 * 100%);
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+    }
+  }
+}

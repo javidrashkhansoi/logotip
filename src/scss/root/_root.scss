@@ -1,0 +1,27 @@
+:root {
+  --font-main: "Consolas", monospace;
+  --font-logo: "Jost", sans-serif;
+
+  --color-black: #000;
+  --color-white: #fff;
+  --color-white-33: rgba(255, 255, 255, 0.33);
+  --color-text: #444;
+  --color-main-title: #1a1616;
+  --color-header-link: #0f1315;
+  --color-background: #f4f4f4;
+  --color-background-text: #d5dde1;
+  --color-accent: #6fdd54;
+  --color-button: #181c1f;
+  --color-button-gradient: linear-gradient(156deg, #6fdd54 0%, #1ccb6f 100%);
+  --color-border: #e9e9e9;
+  --color-link: #6cd153;
+  --color-placeholder: #5e5c5c;
+  --color-input-border: #8c8c8c;
+  --color-footer-socials: #666;
+  --color-copyright: #7e7e7e;
+  --color-tech-icon: #e6e6e6;
+
+  --box-shadow: 0 4px 22px 0 rgba(192, 192, 192, 0.25);
+
+  color: var(--color-text);
+}

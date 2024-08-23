@@ -1,0 +1,14 @@
+.background {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline: 0;
+  z-index: -1;
+  padding-block-start: vw-desktop(44);
+  padding-inline: vw-desktop(18) vw-desktop(13);
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  white-space: pre;
+  color: $color-background-text;
+  tab-size: 1;
+}
