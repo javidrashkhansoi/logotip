@@ -1,4 +1,5 @@
 import "@styles/global.scss";
+import "./index.scss";
 
 const MIN_1024_PX = matchMedia("(min-width: 1024.1px)");
 

@@ -1,0 +1,136 @@
+.form {
+  padding-block: vw-mobile(40);
+
+  @media (min-width: #{768 + 0.1px}) {
+    padding-block: vw-tablet(40);
+  }
+
+  @media (min-width: #{1024 + 0.1px}) {
+    padding-block: vw-desktop(40);
+  }
+
+  // .form__container
+  &__container {
+  }
+
+  // .form__block
+  &__block {
+    @media (min-width: #{768 + 0.1px}) {
+      padding-inline: vw-tablet-2(300, 0);
+    }
+
+    @media (min-width: #{1024 + 0.1px}) {
+      padding-inline: vw-desktop(300);
+    }
+  }
+
+  // .form__title
+  &__title {
+    margin-block-end: vw-mobile(20);
+    text-align: center;
+
+    @media (min-width: #{768 + 0.1px}) {
+      margin-block-end: vw-tablet-2(40, 20);
+    }
+
+    @media (min-width: #{1024 + 0.1px}) {
+      margin-block-end: vw-desktop(40);
+    }
+  }
+
+  // .form__inner
+  &__inner {
+  }
+
+  // .form__inputs
+  &__inputs {
+    display: grid;
+    gap: vw-mobile(20);
+    margin-block-end: vw-mobile(20);
+
+    @media (min-width: #{768 + 0.1px}) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: vw-tablet(20);
+      margin-block-end: vw-tablet(20);
+    }
+
+    @media (min-width: #{1024 + 0.1px}) {
+      gap: vw-desktop(20);
+      margin-block-end: vw-desktop(20);
+    }
+  }
+
+  // .form__input
+  &__input {
+    input {
+      block-size: vw-mobile(70);
+      padding-inline: vw-mobile(20);
+      border: 1px solid $color-input-border;
+      border-radius: vw-mobile(20);
+
+      @include prefers-reduced-motion {
+        transition-property: border-color;
+        transition-duration: 0.3s;
+      }
+
+      &:focus {
+        border-color: $color-accent;
+      }
+
+      @media (min-width: #{768 + 0.1px}) {
+        block-size: vw-tablet(70);
+        padding-inline: vw-tablet(20);
+        border-radius: vw-tablet(20);
+      }
+
+      @media (min-width: #{1024 + 0.1px}) {
+        block-size: vw-desktop(70);
+        padding-inline: vw-desktop(20);
+        border-radius: vw-desktop(20);
+      }
+
+      &::placeholder {
+        color: $color-placeholder;
+      }
+    }
+  }
+
+  // .form__button
+  &__button {
+    --button-width: 380;
+    --button-height: 75;
+    --button-border-radius: 16;
+
+    margin-inline: auto;
+  }
+
+  // .form__text
+  &__text {
+    margin-block-start: vw-mobile(20);
+    text-align: center;
+    color: $color-black;
+
+    @media (min-width: #{768 + 0.1px}) {
+      margin-block-start: vw-tablet(20);
+      padding-inline: vw-tablet-2(125, 0);
+    }
+
+    @media (min-width: #{1024 + 0.1px}) {
+      margin-block-start: vw-desktop(20);
+      padding-inline: vw-desktop(125);
+    }
+
+    a {
+      color: $color-accent;
+
+      @include prefers-reduced-motion {
+        transition-property: opacity;
+        transition-duration: 0.3s;
+      }
+
+      @include hover {
+        opacity: 0.75;
+      }
+    }
+  }
+}
