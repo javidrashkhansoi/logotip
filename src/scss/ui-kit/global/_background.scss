@@ -10,6 +10,10 @@
   text-transform: uppercase;
   white-space: pre;
   user-select: none;
-  color: $color-background-text;
+  color: #192023;
   tab-size: 1;
+
+  .light & {
+    color: #d5dde1;
+  }
 }

@@ -12,8 +12,8 @@
   text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
-  color: $color-button;
-  background-image: $color-button-gradient;
+  color: $color-black;
+  background-image: linear-gradient(156deg, #6fdd54 0%, #1ccb6f 100%);
   border: 1px solid $color-accent;
   border-radius: calc(var(--button-border-radius, 15) / 20 * 1em);
 

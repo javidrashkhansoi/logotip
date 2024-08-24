@@ -1,44 +1,105 @@
 .glass {
-  &:not(&--tablet) {
-    padding-block: vw-mobile(20) vw-mobile(30);
+  &:not(&--desktop) {
+    padding-block: var(--glass-padding-block, var(--glass-padding-top, #{vw-mobile(20)}))
+      var(--glass-padding-block, var(--glass-padding-bottom, #{vw-mobile(30)}));
     padding-inline: vw-mobile(20);
-    background-color: $color-white-33;
-    box-shadow: $box-shadow;
-    border: 1px solid $color-white;
-    border-radius: vw-mobile(20);
+    background: var(
+      --glass-background,
+      linear-gradient(314deg, rgba(87, 87, 87, 0.05) 0%, rgba(223, 223, 212, 0.05) 100%)
+    );
+    box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.25);
+    border-radius: var(--glass-border-radius, #{vw-mobile(30)});
     backdrop-filter: blur(5px);
     transform: translateZ(0);
 
-    @media (min-width: #{768 + 0.1px}) {
-      padding-block: vw-tablet-2(40, 20);
-      padding-inline: vw-tablet-2(100, 20);
-      border-radius: vw-tablet-2(30, 20);
+    :root:not(.light) &:not(.glass--solid) {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        padding: 1px;
+        background: linear-gradient(345deg, rgba(#c9c9c9, 0.55) 0%, rgba(#1d1d1e, 0.55) 52%, rgba(#fff, 0.55) 100%);
+        mask:
+          linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        mask-composite: exclude;
+        border-radius: inherit;
+      }
     }
 
-    @media (min-width: #{1024 + 0.1px}) {
-      padding-block: vw-desktop(40);
+    .light & {
+      --glass-border-radius: #{vw-mobile(20)};
+      --glass-background: rgba(255, 255, 255, 0.33);
+
+      box-shadow: 0 4px 22px 0 rgba(192, 192, 192, 0.25);
+      border: 1px solid $color-white;
+      backdrop-filter: blur(2.5px);
+
+      @media (min-width: #{900 + 0.1px}) {
+        --glass-border-radius: #{vw-desktop(30)};
+      }
+    }
+
+    @media (min-width: #{900 + 0.1px}) {
+      --glass-padding-block: #{vw-desktop(40)};
+      --glass-border-radius: #{vw-desktop(30)};
+
       padding-inline: vw-desktop(100);
-      border-radius: vw-desktop(30);
     }
   }
 
-  // .glass--tablet
-  &--tablet {
-    @media (min-width: #{768 + 0.1px}) {
-      padding-block: var(--glass-padding-block-tablet, #{vw-tablet-2(40, 20)});
-      padding-inline: vw-tablet-2(100, 20);
-      background-color: $color-white-33;
-      box-shadow: $box-shadow;
+  // .glass--desktop
+  &--desktop {
+    @media (min-width: #{900 + 0.1px}) {
+      padding-block: var(--glass-padding-block, var(--glass-padding-top, #{vw-desktop(40)}))
+        var(--glass-padding-block, var(--glass-padding-bottom, #{vw-desktop(40)}));
+      padding-inline: vw-desktop(100);
+      background: var(
+        --glass-background,
+        linear-gradient(314deg, rgba(87, 87, 87, 0.05) 0%, rgba(223, 223, 212, 0.05) 100%)
+      );
+      box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.25);
       border: 1px solid $color-white;
-      border-radius: vw-tablet-2(30, 20);
+      border-radius: var(--glass-border-radius, #{vw-desktop(30)});
       backdrop-filter: blur(5px);
       transform: translateZ(0);
 
-      @media (min-width: #{1024 + 0.1px}) {
-        padding-block: var(--glass-padding-block-desktop, #{vw-desktop(40)});
-        padding-inline: vw-desktop(100);
-        border-radius: vw-desktop(30);
+      :root:not(.light) &:not(.glass--solid) {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          z-index: -2;
+          padding: 1px;
+          background: linear-gradient(345deg, rgba(#c9c9c9, 0.55) 0%, rgba(#1d1d1e, 0.55) 52%, rgba(#fff, 0.55) 100%);
+          mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+          mask-composite: exclude;
+          border-radius: inherit;
+        }
+      }
+
+      .light & {
+        --glass-background: rgba(255, 255, 255, 0.33);
+
+        box-shadow: 0 4px 22px 0 rgba(192, 192, 192, 0.25);
+        border: 1px solid $color-white;
+        backdrop-filter: blur(2.5px);
       }
     }
+  }
+
+  // .glass--solid
+  &--solid {
   }
 }

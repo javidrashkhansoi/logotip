@@ -7,9 +7,14 @@
   font-size: vw-mobile(20);
   line-height: 1;
   text-transform: uppercase;
-  color: var(--logo-color, #{$color-black});
+  color: $color-primary;
 
-  &:not(&--footer) {
+  // .logo--footer
+  &--footer {
+    --logo-icon-background: #{$color-button-gradient};
+  }
+
+  &[href] {
     @include prefers-reduced-motion {
       transition-property: opacity;
       transition-duration: 0.3s;
@@ -20,18 +25,7 @@
     }
   }
 
-  // .logo--footer
-  &--footer {
-    --logo-color: #{$color-white};
-    --logo-icon-background: #{$color-button-gradient};
-  }
-
-  @media (min-width: #{768 + 0.1px}) {
-    gap: vw-tablet(10);
-    font-size: vw-tablet(20);
-  }
-
-  @media (min-width: #{1024 + 0.1px}) {
+  @media (min-width: #{900 + 0.1px}) {
     gap: vw-desktop(10);
     font-size: vw-desktop(20);
   }
@@ -46,11 +40,7 @@
     border: 1px solid $color-accent;
     border-radius: 50%;
 
-    @media (min-width: #{768 + 0.1px}) {
-      inline-size: vw-tablet(40);
-    }
-
-    @media (min-width: #{1024 + 0.1px}) {
+    @media (min-width: #{900 + 0.1px}) {
       inline-size: vw-desktop(40);
     }
   }

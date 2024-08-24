@@ -1,17 +1,9 @@
 @use "sass:math";
 
 @function vw-desktop($value) {
-  @return math.round(calc($value / 1600 * 100vw) * 100) / 100;
-}
-
-@function vw-tablet($value) {
-  @return math.round(calc($value / 1024 * 100vw) * 100) / 100;
-}
-
-@function vw-tablet-2($value-desktop, $value-mobile) {
-  @return math.round(calc((($value-desktop + $value-mobile) / 2) / 1024 * 100vw) * 100) / 100;
+  @return math.div(math.round(calc($value / 1600 * 100vw) * 100), 100);
 }
 
 @function vw-mobile($value) {
-  @return math.round(calc($value / 500 * 100vw) * 100) / 100;
+  @return math.div(math.round(calc($value / 500 * 100vw) * 100), 100);
 }

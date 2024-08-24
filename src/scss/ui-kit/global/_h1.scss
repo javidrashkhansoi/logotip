@@ -3,13 +3,13 @@
   line-height: var(--h1-line-height, 1.2);
   letter-spacing: 0.01em;
   text-transform: uppercase;
-  color: $color-main-title;
+  color: $color-primary;
 
-  @media (min-width: #{768 + 0.1px}) {
-    font-size: var(--h1-font-size-tablet, vw-tablet-2(48, 36));
+  .light & {
+    color: #1a1616;
   }
 
-  @media (min-width: #{1024 + 0.1px}) {
+  @media (min-width: #{900 + 0.1px}) {
     font-size: vw-desktop(48);
   }
 }

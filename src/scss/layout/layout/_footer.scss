@@ -1,11 +1,7 @@
 .footer {
-  padding-block: vw-mobile(40);
+  padding-block: vw-mobile(20);
 
-  @media (min-width: #{768 + 0.1px}) {
-    padding-block: vw-tablet(40);
-  }
-
-  @media (min-width: #{1024 + 0.1px}) {
+  @media (min-width: #{900 + 0.1px}) {
     padding-block: vw-desktop(40);
   }
 
@@ -15,6 +11,14 @@
 
   // .footer__inner
   &__inner {
+    --glass-padding-top: #{vw-mobile(30)};
+    --glass-padding-bottom: #{vw-mobile(20)};
+
+    :root:not(.portfolio-page) & {
+      @media (min-width: #{900 + 0.1px}) {
+        --glass-padding-block: #{vw-desktop(60)};
+      }
+    }
   }
 
   // .footer__top
@@ -22,26 +26,18 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: vw-mobile(20);
+    gap: vw-mobile(30);
 
     &:not(:last-child) {
       margin-block-end: vw-mobile(20);
 
-      @media (min-width: #{768 + 0.1px}) {
-        margin-block-end: vw-tablet(20);
-      }
-
-      @media (min-width: #{1024 + 0.1px}) {
+      @media (min-width: #{900 + 0.1px}) {
         margin-block-end: vw-desktop(20);
       }
     }
 
-    @media (min-width: #{768 + 0.1px}) {
-      gap: vw-tablet(20);
-    }
-
-    @media (min-width: #{1024 + 0.1px}) {
-      gap: vw-desktop(20);
+    @media (min-width: #{900 + 0.1px}) {
+      gap: vw-desktop(30);
     }
   }
 
@@ -54,11 +50,7 @@
     &:not(:last-child) {
       margin-block-end: vw-mobile(20);
 
-      @media (min-width: #{768 + 0.1px}) {
-        margin-block-end: vw-tablet(20);
-      }
-
-      @media (min-width: #{1024 + 0.1px}) {
+      @media (min-width: #{900 + 0.1px}) {
         margin-block-end: vw-desktop(20);
       }
     }
@@ -70,7 +62,7 @@
 
   // .footer__socials
   &__socials {
-    @media (max-width: 1024px) {
+    @media (max-width: 900px) {
       inline-size: 100%;
     }
   }
@@ -81,23 +73,14 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    row-gap: vw-mobile(10);
-    column-gap: vw-mobile(20);
+    gap: vw-mobile(20);
     padding-block: vw-mobile(5);
     font-size: vw-mobile(16);
     line-height: 1;
-    color: $color-copyright;
+    color: #7e7e7e;
 
-    @media (min-width: #{768 + 0.1px}) {
-      row-gap: vw-tablet(10);
-      column-gap: vw-tablet(20);
-      padding-block: vw-tablet(5);
-      font-size: vw-tablet(16);
-    }
-
-    @media (min-width: #{1024 + 0.1px}) {
-      row-gap: vw-desktop(10);
-      column-gap: vw-desktop(20);
+    @media (min-width: #{900 + 0.1px}) {
+      gap: vw-desktop(20);
       padding-block: vw-desktop(5);
       font-size: vw-desktop(16);
     }
@@ -122,18 +105,17 @@
 
 .contacts {
   line-height: 1;
-  color: $color-black;
+
+  .light & {
+    color: $color-primary;
+  }
 
   // .contacts__item
   &__item {
     &:not(:last-child) {
       margin-block-end: vw-mobile(10);
 
-      @media (min-width: #{768 + 0.1px}) {
-        margin-block-end: vw-tablet(10);
-      }
-
-      @media (min-width: #{1024 + 0.1px}) {
+      @media (min-width: #{900 + 0.1px}) {
         margin-block-end: vw-desktop(10);
       }
     }
@@ -153,50 +135,33 @@
 }
 
 .footer-socials {
-  padding: vw-mobile(20);
-  background-color: $color-white;
-  border: 2px solid $color-border;
-  border-radius: vw-mobile(20);
-
-  @media (min-width: #{768 + 0.1px}) {
-    padding: vw-tablet-2(50, 20);
-    border-radius: vw-tablet-2(30, 20);
-  }
-
-  @media (min-width: #{1024 + 0.1px}) {
+  @media (min-width: #{900 + 0.1px}) {
     padding: vw-desktop(50);
+    border: 2px solid $color-border;
     border-radius: vw-desktop(30);
+
+    .light & {
+      background-color: $color-white;
+    }
   }
 
   // .footer-socials__item
   &__item {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    column-gap: vw-mobile(20);
-    row-gap: vw-mobile(10);
+    gap: vw-mobile(2);
 
     &:not(:last-child) {
       margin-block-end: vw-mobile(20);
 
-      @media (min-width: #{768 + 0.1px}) {
-        margin-block-end: vw-tablet(20);
-      }
-
-      @media (min-width: #{1024 + 0.1px}) {
+      @media (min-width: #{900 + 0.1px}) {
         margin-block-end: vw-desktop(20);
       }
     }
 
-    @media (min-width: #{768 + 0.1px}) {
-      column-gap: vw-tablet-2(90, 20);
-      row-gap: vw-tablet(10);
-    }
-
-    @media (min-width: #{1024 + 0.1px}) {
-      column-gap: vw-desktop(90);
-      row-gap: vw-desktop(10);
+    @media (min-width: #{900 + 0.1px}) {
+      gap: vw-desktop(90);
     }
   }
 
@@ -205,14 +170,15 @@
     display: flex;
     align-items: center;
     gap: vw-mobile(20);
-    color: $color-black;
+    font-size: vw-mobile(16);
 
-    @media (min-width: #{768 + 0.1px}) {
-      gap: vw-tablet(20);
+    .light & {
+      color: $color-primary;
     }
 
-    @media (min-width: #{1024 + 0.1px}) {
+    @media (min-width: #{900 + 0.1px}) {
       gap: vw-desktop(20);
+      font-size: vw-desktop(20);
     }
   }
 
@@ -222,11 +188,11 @@
     justify-content: center;
     align-items: center;
     flex: 0 0 auto;
-    inline-size: vw-mobile(40);
+    inline-size: vw-mobile(50);
     aspect-ratio: 1 / 1;
     font-size: 0;
     color: $color-white;
-    background-color: $color-footer-socials;
+    background-color: #666;
     border-radius: 50%;
 
     // .footer-socials__icon--telegram
@@ -245,11 +211,7 @@
       }
     }
 
-    @media (min-width: #{768 + 0.1px}) {
-      inline-size: vw-tablet-2(50, 40);
-    }
-
-    @media (min-width: #{1024 + 0.1px}) {
+    @media (min-width: #{900 + 0.1px}) {
       inline-size: vw-desktop(50);
     }
   }
@@ -260,9 +222,6 @@
 
   // .footer-socials__link
   &__link {
-    @media (max-width: 768px) {
-      --button-min-width: 100%;
-    }
   }
 }
 
@@ -271,23 +230,15 @@
   align-items: center;
   gap: vw-mobile(8);
 
-  @media (min-width: #{768 + 0.1px}) {
-    gap: vw-tablet(8);
-  }
-
-  @media (min-width: #{1024 + 0.1px}) {
+  @media (min-width: #{900 + 0.1px}) {
     gap: vw-desktop(8);
   }
 
   // .copy__icon
   &__icon {
-    font-size: vw-mobile(20);
+    font-size: vw-mobile(16);
 
-    @media (min-width: #{768 + 0.1px}) {
-      font-size: vw-tablet(20);
-    }
-
-    @media (min-width: #{1024 + 0.1px}) {
+    @media (min-width: #{900 + 0.1px}) {
       font-size: vw-desktop(20);
     }
   }

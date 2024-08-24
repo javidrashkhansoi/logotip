@@ -1,14 +1,12 @@
 .h2 {
-  font-weight: 700;
-  font-size: vw-mobile(20);
+  font-size: vw-mobile(32);
   line-height: 1.2;
-  color: $color-black;
 
-  @media (min-width: #{768 + 0.1px}) {
-    font-size: vw-tablet-2(32, 20);
+  .light & {
+    color: $color-primary;
   }
 
-  @media (min-width: #{1024 + 0.1px}) {
+  @media (min-width: #{900 + 0.1px}) {
     font-size: vw-desktop(32);
   }
 }
