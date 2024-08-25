@@ -1,11 +1,11 @@
 import Swiper from "swiper";
-import { Keyboard, FreeMode, } from "swiper/modules";
+import { Keyboard, } from "swiper/modules";
 
 const teamSlider = document.querySelector(".team-slider");
 
 if (teamSlider) {
   const swiper = new Swiper(teamSlider, {
-    modules: [Keyboard, FreeMode,],
+    modules: [Keyboard,],
     keyboard: {
       enabled: true,
       pageUpDown: false,
@@ -15,7 +15,7 @@ if (teamSlider) {
         slidesPerView: 4,
       },
     },
-    slidesPerView: 0.621301775,
+    slidesPerView: 1,
     spaceBetween: 20,
     rewind: true,
     freeMode: true,

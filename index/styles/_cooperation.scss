@@ -11,8 +11,6 @@
 
   // .cooperation__inner
   &__inner {
-    padding-inline: vw-mobile(20);
-
     @media (min-width: #{900 + 0.1px}) {
       padding-inline: vw-desktop(100);
     }
@@ -54,6 +52,10 @@
 .cooperation-slider {
   user-select: none;
   overflow: visible;
+
+  @media (max-width: 900px) {
+    padding-inline-end: vw-mobile(20);
+  }
 
   // .cooperation-slider__wrapper
   &__wrapper {

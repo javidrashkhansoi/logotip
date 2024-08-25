@@ -1,5 +1,5 @@
 .team {
-  padding-block: vw-mobile(20) vw-mobile(30);
+  padding-block: vw-mobile(20) vw-mobile(75);
 
   @media (min-width: #{900 + 0.1px}) {
     padding-block: vw-desktop(100) vw-desktop(80);
@@ -11,8 +11,6 @@
 
   // .team__inner
   &__inner {
-    padding-inline: vw-mobile(20);
-
     @media (min-width: #{900 + 0.1px}) {
       padding-inline: vw-desktop(100);
     }
@@ -44,6 +42,10 @@
 .team-slider {
   user-select: none;
   overflow: visible;
+
+  @media (max-width: 900px) {
+    padding-inline-end: vw-mobile(20);
+  }
 
   // .team-slider__wrapper
   &__wrapper {
@@ -91,7 +93,7 @@
   }
 
   @media (max-width: 900px) {
-    grid-template-columns: vw-mobile(220) 1fr;
+    grid-template-columns: vw-mobile(120) 1fr;
   }
 
   // .team-card__image
@@ -111,7 +113,7 @@
 
   // .team-card__header
   &__header {
-    margin-block-end: vw-mobile(20);
+    margin-block-end: vw-mobile(10);
 
     @media (min-width: #{900 + 0.1px}) {
       margin-block-end: vw-desktop(20);
@@ -121,6 +123,7 @@
   // .team-card__title
   &__title {
     margin-block-end: vw-mobile(4);
+    font-size: vw-mobile(24);
 
     @media (min-width: #{900 + 0.1px}) {
       margin-block-end: vw-desktop(4);
@@ -186,7 +189,7 @@
     // .freelance__list--show
     &--show {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       inline-size: 100%;
 
       @media (min-width: #{900 + 0.1px}) {
@@ -218,10 +221,10 @@
 
     @media (max-width: 900px) {
       .freelance__list:not(.freelance__list--show) & {
-        inline-size: vw-mobile(70);
+        inline-size: vw-mobile(60);
       }
 
-      .freelance__list:not(.freelance__list--show) &:not(:nth-child(-n + 4)) {
+      .freelance__list:not(.freelance__list--show) &:not(:nth-child(-n + 5)) {
         display: none;
       }
     }
@@ -233,7 +236,7 @@
     justify-content: center;
     align-items: center;
     flex: 0 0 auto;
-    inline-size: vw-mobile(70);
+    inline-size: vw-mobile(60);
     aspect-ratio: 1 / 1;
     line-height: 1;
     color: #d2d2d2;
