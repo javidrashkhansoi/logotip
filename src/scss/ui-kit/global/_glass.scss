@@ -46,7 +46,8 @@
     }
 
     @media (min-width: #{900 + 0.1px}) {
-      --glass-padding-block: #{vw-desktop(40)};
+      --glass-padding-top: #{vw-desktop(40)};
+      --glass-padding-bottom: #{vw-desktop(40)};
       --glass-border-radius: #{vw-desktop(30)};
 
       padding-inline: vw-desktop(100);

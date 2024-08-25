@@ -6,6 +6,12 @@
     color: $color-primary;
   }
 
+  // .h2--expanded
+  &--expanded {
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+  }
+
   @media (min-width: #{900 + 0.1px}) {
     font-size: vw-desktop(32);
   }

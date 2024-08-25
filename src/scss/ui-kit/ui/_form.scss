@@ -47,6 +47,7 @@
     margin-block-end: vw-mobile(40);
 
     @media (min-width: #{900 + 0.1px}) {
+      grid-template-columns: repeat(2, 1fr);
       gap: vw-desktop(20);
       margin-block-end: vw-desktop(40);
     }

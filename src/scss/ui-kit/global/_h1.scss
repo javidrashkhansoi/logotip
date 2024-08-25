@@ -1,5 +1,5 @@
 .h1 {
-  font-size: var(--h1-font-size-mobile, vw-mobile(36));
+  font-size: var(--h1-font-size, vw-mobile(36));
   line-height: var(--h1-line-height, 1.2);
   letter-spacing: 0.01em;
   text-transform: uppercase;
@@ -10,6 +10,14 @@
   }
 
   @media (min-width: #{900 + 0.1px}) {
-    font-size: vw-desktop(48);
+    --h1-font-size: vw-desktop(48);
+  }
+
+  // .h1__text
+  &__text {
+    // .h1__text--green
+    &--green {
+      color: $color-accent;
+    }
   }
 }

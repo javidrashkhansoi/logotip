@@ -201,8 +201,8 @@
     gap: vw-desktop(7);
   }
 
-  // .portfolio-technologies__image
-  &__image {
+  // .portfolio-technologies__icon
+  &__icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,8 +215,8 @@
     overflow: hidden;
 
     img {
-      inline-size: calc(45 / 55 * 100%);
-      aspect-ratio: 1 / 1;
+      inline-size: calc(var(--portfolio-technology-icon-width) / 55 * 100%);
+      max-block-size: calc(45 / 55 * 100%);
       object-fit: contain;
     }
   }

@@ -1,0 +1,245 @@
+.projects {
+  padding-block: vw-mobile(20) vw-mobile(35);
+
+  @media (min-width: #{900 + 0.1px}) {
+    padding-block: vw-desktop(40);
+  }
+
+  // .projects__container
+  &__container {
+  }
+
+  // .projects__inner
+  &__inner {
+    &:not(.glass-desktop) {
+      --glass-padding-top: #{vw-mobile(40)};
+      --glass-padding-bottom: #{vw-mobile(30)};
+
+      @media (min-width: #{900 + 0.1px}) {
+        --glass-padding-top: #{vw-desktop(70)};
+        --glass-padding-bottom: #{vw-desktop(110)};
+      }
+    }
+  }
+
+  // .projects__header
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    gap: vw-mobile(35);
+    margin-block-end: vw-mobile(30);
+
+    @media (min-width: #{900 + 0.1px}) {
+      gap: vw-desktop(35);
+      margin-block-end: vw-desktop(60);
+    }
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+    }
+  }
+
+  // .projects__label
+  &__label {
+  }
+
+  // .projects__title
+  &__title {
+    font-size: vw-mobile(36);
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: $color-primary;
+
+    @media (min-width: #{900 + 0.1px}) {
+      font-size: vw-desktop(48);
+    }
+  }
+
+  // .projects__caption
+  &__caption {
+    margin-block-start: vw-desktop(8);
+    font-size: vw-desktop(24);
+    line-height: 1;
+    color: #646569;
+
+    @media (max-width: 900px) {
+      display: none;
+    }
+  }
+
+  // .projects__statistics
+  &__statistics {
+  }
+
+  // .projects__portfolio
+  &__portfolio {
+  }
+}
+
+.projects-statistics {
+  display: flex;
+  gap: vw-mobile(75);
+
+  @media (min-width: #{900 + 0.1px}) {
+    gap: vw-desktop(75);
+  }
+
+  // .projects-statistics__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: vw-mobile(5);
+    inline-size: min-content;
+
+    @media (min-width: #{900 + 0.1px}) {
+      gap: vw-desktop(5);
+    }
+  }
+
+  // .projects-statistics__count
+  &__count {
+    font-size: vw-mobile(32);
+    line-height: 1;
+    color: $color-accent;
+
+    @media (min-width: #{900 + 0.1px}) {
+      font-size: vw-desktop(32);
+    }
+  }
+
+  // .projects-statistics__text
+  &__text {
+    font-size: vw-mobile(18);
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $color-primary;
+
+    @media (min-width: #{900 + 0.1px}) {
+      font-size: vw-desktop(18);
+    }
+  }
+}
+
+.projects-portfolio {
+  // .projects-portfolio__list
+  &__list {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-auto-rows: 1fr;
+    gap: vw-mobile(20);
+
+    @media (min-width: #{900 + 0.1px}) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: vw-desktop(20);
+    }
+  }
+
+  // .projects-portfolio__item
+  &__item {
+    // .projects-portfolio__item--hide
+    &--hide {
+      @media (max-width: 900px) {
+        display: none;
+      }
+    }
+  }
+
+  // .projects-portfolio__link
+  &__link {
+    --button-min-width: 100%;
+    --button-height: 75;
+    --button-border-radius: 16;
+
+    margin-block-start: vw-mobile(30);
+
+    @media (min-width: #{900 + 0.1px}) {
+      margin-block-start: vw-desktop(60);
+    }
+  }
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: vw-mobile(50) 1fr;
+  gap: vw-mobile(20);
+  block-size: 100%;
+  padding: vw-mobile(24);
+  line-height: 1;
+  border: 1px solid $color-black;
+  border-radius: vw-mobile(16);
+  backdrop-filter: blur(2px);
+  background: rgba(86, 86, 86, 0.3);
+
+  @media (min-width: #{900 + 0.1px}) {
+    grid-template-columns: vw-desktop(50) 1fr;
+    gap: vw-desktop(10);
+    padding: vw-desktop(24);
+    border-radius: vw-desktop(16);
+  }
+
+  // .project-card__icon
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    font-size: 0;
+    background-color: #646569;
+    border-radius: 50%;
+
+    img {
+      max-inline-size: 90%;
+    }
+  }
+
+  // .project-card__inner
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: vw-mobile(10);
+    align-items: start;
+
+    @media (min-width: #{900 + 0.1px}) {
+      gap: vw-desktop(10);
+    }
+  }
+
+  // .project-card__link
+  &__link {
+    font-size: vw-mobile(22);
+    text-transform: uppercase;
+    color: $color-primary;
+
+    @include prefers-reduced-motion {
+      transition-property: opacity;
+      transition-duration: 0.3s;
+    }
+
+    @include hover {
+      opacity: 0.75;
+    }
+
+    @media (min-width: #{900 + 0.1px}) {
+      font-size: vw-desktop(22);
+    }
+  }
+
+  // .project-card__title
+  &__title {
+    text-wrap: balance;
+    color: #646569;
+
+    a {
+      @include prefers-reduced-motion {
+        transition-property: opacity;
+        transition-duration: 0.3s;
+      }
+
+      @include hover {
+        opacity: 0.75;
+      }
+    }
+  }
+}
