@@ -71,6 +71,7 @@
   display: grid;
   grid-template-columns: auto 1fr;
   gap: vw-mobile(20);
+  user-select: none;
 
   @media (min-width: #{900 + 0.1px}) {
     gap: vw-desktop(20);

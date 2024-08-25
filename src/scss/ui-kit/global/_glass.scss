@@ -15,7 +15,6 @@
     :root:not(.light) &:not(.glass--solid) {
       position: relative;
       isolation: isolate;
-      overflow: hidden;
 
       &::after {
         content: "";

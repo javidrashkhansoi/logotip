@@ -66,6 +66,12 @@
 
   // .nav__item
   &__item {
+    // .nav__item--hide
+    &--hide {
+      @media (max-width: 900px) {
+        display: none;
+      }
+    }
   }
 
   // .nav__link
