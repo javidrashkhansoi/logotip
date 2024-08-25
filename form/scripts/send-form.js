@@ -9,7 +9,7 @@ forms.forEach((form) => {
     const data = Object.fromEntries(formData.entries());
     const json = JSON.stringify(data);
 
-    fetch("https://singleapi.pasha.deisign/sayt/1.php", {
+    fetch("https://singleapi.pasha.design/sayt/1.php", {
       method: "POST",
       body: json,
       headers: {
