@@ -1,8 +1,8 @@
 .cooperation {
-  padding-block: vw-mobile(35) vw-mobile(20);
+  padding-block: vw-mobile(40);
 
   @media (min-width: #{900 + 0.1px}) {
-    padding-block: vw-desktop(90) vw-desktop(100);
+    padding-block: vw-desktop(60);
   }
 
   // .cooperation__container

@@ -1,8 +1,8 @@
 .reviews {
-  padding-block: vw-mobile(30) vw-mobile(45);
+  padding-block: vw-mobile(40);
 
   @media (min-width: #{900 + 0.1px}) {
-    padding-block: vw-desktop(80) vw-desktop(65);
+    padding-block: vw-desktop(60);
   }
 
   // .reviews__container

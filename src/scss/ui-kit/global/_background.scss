@@ -3,15 +3,23 @@
   inset-block-start: 0;
   inset-inline: 0;
   z-index: -1;
-  padding-block-start: vw-desktop(44);
-  padding-inline: vw-desktop(18) vw-desktop(13);
+  padding-block-start: vw-mobile(12);
+  padding-inline: vw-mobile(10) vw-mobile(0);
+  font-family: inherit;
+  font-size: vw-mobile(20);
   line-height: 1.2;
   letter-spacing: 0.01em;
   text-transform: uppercase;
-  white-space: pre;
-  user-select: none;
+  // white-space: pre;
+  // user-select: none;
   color: #192023;
-  tab-size: 1;
+  // tab-size: 1;
+
+  @media (min-width: #{900 + 0.1px}) {
+    padding-block-start: vw-desktop(44);
+    padding-inline: vw-desktop(18) vw-desktop(13);
+    font-size: vw-desktop(20);
+  }
 
   .light & {
     color: #d5dde1;

@@ -1,8 +1,8 @@
 .stack {
-  padding-block: vw-mobile(35) vw-mobile(30);
+  padding-block: vw-mobile(40);
 
   @media (min-width: #{900 + 0.1px}) {
-    padding-block: vw-desktop(40);
+    padding-block: vw-desktop(60);
   }
 
   // .stack__container
@@ -60,6 +60,10 @@
     grid-template-columns: repeat(2, 1fr);
     row-gap: vw-desktop(50);
     column-gap: vw-desktop(20);
+  }
+
+  @media (max-width: 900px) {
+    padding-inline: vw-mobile(40) vw-mobile(20);
   }
 
   // .stacks__item

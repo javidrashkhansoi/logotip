@@ -23,7 +23,7 @@ export default defineConfig({
       targets: ['defaults', 'not IE 11'],
     }),
     injectHTML(),
-    ViteMinifyPlugin(),
+    // ViteMinifyPlugin(),
     ViteImageOptimizer({
       test: /\.(jpe?g|png|gif|tiff|webp|avif)$/i,
       svg: null,

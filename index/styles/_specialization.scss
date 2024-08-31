@@ -1,9 +1,9 @@
 .specialization {
-  padding-block: vw-mobile(30) vw-mobile(35);
+  padding-block: vw-mobile(40);
   color: #646569;
 
   @media (min-width: #{900 + 0.1px}) {
-    padding-block: vw-desktop(40) vw-desktop(90);
+    padding-block: vw-desktop(60);
   }
 
   // .specialization__container
@@ -17,7 +17,7 @@
       --glass-background: #e8e8e8;
 
       @media (min-width: #{900 + 0.1px}) {
-        --glass-padding-block: #{vw-desktop(70)};
+        --glass-padding-block: #{vw-desktop(80)};
       }
     }
   }
@@ -27,7 +27,7 @@
     margin-block-end: vw-mobile(20);
 
     @media (min-width: #{900 + 0.1px}) {
-      margin-block-end: vw-desktop(60);
+      margin-block-end: vw-desktop(35);
     }
   }
 
@@ -64,7 +64,7 @@
     --button-height: 75;
     --button-border-radius: 16;
 
-    margin-block-start: vw-desktop(60);
+    margin-block-start: vw-desktop(40);
 
     @media (max-width: 900px) {
       display: none;

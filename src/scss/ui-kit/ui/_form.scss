@@ -2,7 +2,7 @@
   padding-block: vw-mobile(40);
 
   @media (min-width: #{900 + 0.1px}) {
-    padding-block: vw-desktop(65) vw-desktop(75);
+    padding-block: vw-desktop(60);
   }
 
   .portfolio-page & {
