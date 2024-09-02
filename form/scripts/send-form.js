@@ -1,7 +1,6 @@
-/** @type {NodeListOf<HTMLFormElement>} */
-const forms = document.querySelectorAll(".form");
+const forms = document.forms;
 
-forms.forEach((form) => {
+[...forms].forEach((form) => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
 
@@ -17,13 +16,7 @@ forms.forEach((form) => {
       },
     })
       .then((response) => response.json())
-      .then((data) => {
-        console.log("Success:", data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-
-    console.log(json);
+      .then((data) => { form.reset(); })
+      .catch((error) => { });
   });
 });

@@ -62,9 +62,9 @@
     column-gap: vw-desktop(20);
   }
 
-  @media (max-width: 900px) {
-    padding-inline: vw-mobile(40) vw-mobile(20);
-  }
+  // @media (max-width: 900px) {
+  //   padding-inline: vw-mobile(40) vw-mobile(20);
+  // }
 
   // .stacks__item
   &__item {
@@ -83,7 +83,7 @@
 
   @media (max-width: 900px) {
     position: relative;
-    block-size: vw-mobile(180);
+    block-size: vw-mobile(140);
     overflow: hidden;
 
     @include prefers-reduced-motion {
@@ -124,7 +124,7 @@
     flex-wrap: wrap;
     justify-content: end;
     gap: vw-mobile(20);
-    inline-size: vw-mobile(180);
+    inline-size: vw-mobile(220);
 
     @media (min-width: #{900 + 0.1px}) {
       gap: vw-desktop(20);
@@ -137,7 +137,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 0 0 vw-mobile(80);
+    flex: 0 0 vw-mobile(60);
     aspect-ratio: 1 / 1;
     font-size: 0;
     background-color: #2d2d2d;
