@@ -38,6 +38,8 @@
 
   // .form__inner
   &__inner {
+    backdrop-filter: blur(5px);
+    transform: translateZ(0);
   }
 
   // .form__inputs
@@ -129,15 +131,6 @@
 
     a {
       color: $color-accent;
-
-      @include prefers-reduced-motion {
-        transition-property: opacity;
-        transition-duration: 0.3s;
-      }
-
-      @include hover {
-        opacity: 0.75;
-      }
     }
   }
 }

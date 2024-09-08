@@ -28,6 +28,7 @@
     justify-content: space-between;
     gap: vw-mobile(35);
     margin-block-end: vw-mobile(30);
+    color: $color-primary;
 
     @media (min-width: #{900 + 0.1px}) {
       gap: vw-desktop(35);
@@ -45,14 +46,13 @@
 
   // .projects__title
   &__title {
-    font-size: vw-mobile(36);
+    font-size: vw-mobile(34);
     line-height: 1.2;
     letter-spacing: 0.01em;
     text-transform: uppercase;
-    color: $color-primary;
 
     @media (min-width: #{900 + 0.1px}) {
-      font-size: vw-desktop(48);
+      font-size: vw-desktop(40);
     }
   }
 
@@ -61,10 +61,10 @@
     margin-block-start: vw-desktop(8);
     font-size: vw-desktop(24);
     line-height: 1;
-    color: #646569;
 
     @media (max-width: 900px) {
       display: none;
+      font-size: vw-mobile(24);
     }
   }
 
@@ -161,22 +161,28 @@
 }
 
 .project-card {
-  display: grid;
-  grid-template-columns: vw-mobile(50) 1fr;
-  gap: vw-mobile(20);
   block-size: 100%;
-  padding: vw-mobile(24);
-  line-height: 1;
-  border: 1px solid $color-black;
-  border-radius: vw-mobile(16);
-  backdrop-filter: blur(2px);
-  background: rgba(86, 86, 86, 0.3);
 
-  @media (min-width: #{900 + 0.1px}) {
-    grid-template-columns: vw-desktop(50) 1fr;
-    gap: vw-desktop(10);
-    padding: vw-desktop(24);
-    border-radius: vw-desktop(16);
+  // .project-card__block
+  &__block {
+    display: grid;
+    grid-template-columns: vw-mobile(50) 1fr;
+    align-items: center;
+    gap: vw-mobile(20);
+    block-size: 100%;
+    padding: vw-mobile(24);
+    line-height: 1;
+    border: 1px solid $color-black;
+    border-radius: vw-mobile(16);
+    backdrop-filter: blur(2px);
+    background: rgba(86, 86, 86, 0.3);
+
+    @media (min-width: #{900 + 0.1px}) {
+      grid-template-columns: vw-desktop(50) 1fr;
+      gap: vw-desktop(20);
+      padding: vw-desktop(24);
+      border-radius: vw-desktop(16);
+    }
   }
 
   // .project-card__icon
@@ -210,16 +216,7 @@
   &__link {
     font-size: vw-mobile(22);
     text-transform: uppercase;
-    color: $color-primary;
-
-    @include prefers-reduced-motion {
-      transition-property: opacity;
-      transition-duration: 0.3s;
-    }
-
-    @include hover {
-      opacity: 0.75;
-    }
+    color: #6fdd54;
 
     @media (min-width: #{900 + 0.1px}) {
       font-size: vw-desktop(22);
@@ -228,18 +225,12 @@
 
   // .project-card__title
   &__title {
+    font-size: vw-mobile(20);
     text-wrap: balance;
-    color: #646569;
+    color: $color-primary;
 
-    a {
-      @include prefers-reduced-motion {
-        transition-property: opacity;
-        transition-duration: 0.3s;
-      }
-
-      @include hover {
-        opacity: 0.75;
-      }
+    @media (min-width: #{900 + 0.1px}) {
+      font-size: vw-desktop(20);
     }
   }
 }

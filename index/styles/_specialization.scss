@@ -25,6 +25,7 @@
   // .specialization__header
   &__header {
     margin-block-end: vw-mobile(20);
+    color: $color-black;
 
     @media (min-width: #{900 + 0.1px}) {
       margin-block-end: vw-desktop(35);
@@ -34,15 +35,14 @@
   // .specialization__title
   &__title {
     margin-block-end: vw-mobile(8);
-    font-size: vw-mobile(36);
+    font-size: vw-mobile(40);
     line-height: 1.2;
     letter-spacing: 0.01em;
     text-transform: uppercase;
-    color: $color-black;
 
     @media (min-width: #{900 + 0.1px}) {
       margin-block-end: vw-desktop(8);
-      font-size: vw-desktop(36);
+      font-size: vw-desktop(40);
     }
   }
 
@@ -120,12 +120,8 @@
       padding: vw-mobile(24);
 
       @include prefers-reduced-motion {
-        transition-property: padding-block-end, opacity;
+        transition-property: padding-block-end;
         transition-duration: 0.3s;
-      }
-
-      @include hover {
-        opacity: 0.75;
       }
 
       .spoiler-active & {

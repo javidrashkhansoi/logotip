@@ -2,7 +2,7 @@
   padding-block: vw-mobile(85) vw-mobile(20);
 
   @media (min-width: #{900 + 0.1px}) {
-    padding-block: vw-desktop(60) vw-desktop(40);
+    padding-block: vw-desktop(80) vw-desktop(40);
   }
 
   // .hero__container
@@ -20,15 +20,15 @@
 
   // .hero__title
   &__title {
-    --h1-font-size: #{vw-mobile(64)};
+    --h1-font-size: #{vw-mobile(60)};
 
     margin-block-end: vw-mobile(60);
     text-wrap: balance;
 
     @media (min-width: #{900 + 0.1px}) {
-      --h1-font-size: #{vw-desktop(48)};
+      --h1-font-size: #{vw-desktop(54)};
 
-      margin-block-end: vw-desktop(60);
+      margin-block-end: vw-desktop(50);
     }
   }
 
@@ -46,7 +46,7 @@
     margin-block-start: vw-mobile(60);
 
     @media (min-width: #{900 + 0.1px}) {
-      margin-block-start: vw-desktop(80);
+      margin-block-start: vw-desktop(70);
     }
   }
 }

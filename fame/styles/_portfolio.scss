@@ -37,6 +37,10 @@
   &__article {
     font-size: vw-mobile(22);
 
+    > *:last-child {
+      margin-block-end: 0;
+    }
+
     @media (min-width: #{900 + 0.1px}) {
       font-size: vw-desktop(22);
     }
@@ -103,15 +107,6 @@
         text-decoration: underline;
         text-decoration-skip-ink: none;
         text-underline-position: under;
-
-        @include prefers-reduced-motion {
-          transition-property: opacity;
-          transition-duration: 0.3s;
-        }
-
-        @include hover {
-          opacity: 0.75;
-        }
       }
     }
   }

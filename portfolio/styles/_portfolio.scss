@@ -124,15 +124,6 @@
   &__link {
     line-height: 1.2;
     color: #6cd153;
-
-    @include prefers-reduced-motion {
-      transition-property: opacity;
-      transition-duration: 0.3s;
-    }
-
-    @include hover {
-      opacity: 0.75;
-    }
   }
 
   // .portfolio__title
@@ -144,17 +135,6 @@
 
     @media (min-width: #{900 + 0.1px}) {
       font-size: vw-desktop(36);
-    }
-
-    a {
-      @include prefers-reduced-motion {
-        transition-property: opacity;
-        transition-duration: 0.3s;
-      }
-
-      @include hover {
-        opacity: 0.75;
-      }
     }
   }
 

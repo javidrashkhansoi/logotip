@@ -160,6 +160,7 @@
 
   // .freelance__text
   &__text {
+    display: none;
     font-size: vw-mobile(16);
 
     @media (min-width: #{900 + 0.1px}) {
@@ -242,15 +243,6 @@
     color: #d2d2d2;
     background-color: $color-black;
     border-radius: 50%;
-
-    @include prefers-reduced-motion {
-      transition-property: opacity;
-      transition-duration: 0.3s;
-    }
-
-    @include hover {
-      opacity: 0.75;
-    }
 
     @media (min-width: #{900 + 0.1px}) {
       inline-size: vw-desktop(90);

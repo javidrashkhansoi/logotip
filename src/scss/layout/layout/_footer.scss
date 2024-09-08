@@ -92,14 +92,6 @@
 
   // .footer__link
   &__link {
-    @include prefers-reduced-motion {
-      transition-property: opacity;
-      transition-duration: 0.3s;
-    }
-
-    @include hover {
-      opacity: 0.75;
-    }
   }
 }
 
@@ -123,14 +115,6 @@
 
   // .contacts__link
   &__link {
-    @include prefers-reduced-motion {
-      transition-property: opacity;
-      transition-duration: 0.3s;
-    }
-
-    @include hover {
-      opacity: 0.75;
-    }
   }
 }
 

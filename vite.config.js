@@ -47,7 +47,7 @@ export default defineConfig({
         pages: resolve(__dirname, "pages.html"),
         index: resolve(__dirname, "index.html"),
         portfolio: resolve(__dirname, "portfolio/index.html"),
-        "portfolio-inner": resolve(__dirname, "portfolio-inner/index.html"),
+        fame: resolve(__dirname, "fame/index.html"),
         form: resolve(__dirname, "form/index.html"),
       },
     },

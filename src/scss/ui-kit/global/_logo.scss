@@ -14,17 +14,6 @@
     --logo-icon-background: #{$color-button-gradient};
   }
 
-  &[href] {
-    @include prefers-reduced-motion {
-      transition-property: opacity;
-      transition-duration: 0.3s;
-    }
-
-    @include hover {
-      opacity: 0.75;
-    }
-  }
-
   @media (min-width: #{900 + 0.1px}) {
     gap: vw-desktop(10);
     font-size: vw-desktop(20);
