@@ -118,6 +118,17 @@
     aspect-ratio: 1 / 1;
     background-color: $color-accent;
     border-radius: vw-mobile(10);
+    filter: hue-rotate(0deg) saturate(1);
+    transform: translateZ(0);
+
+    @include prefers-reduced-motion {
+      transition-property: filter;
+      transition-duration: 0.3s;
+    }
+
+    @include hover {
+      filter: hue-rotate(-15deg) saturate(1.05);
+    }
 
     @media (min-width: #{900 + 0.1px}) {
       inline-size: vw-desktop(48);

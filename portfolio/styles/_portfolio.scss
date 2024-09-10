@@ -72,7 +72,7 @@
 
   // .portfolios-banner__text
   &__text {
-    line-height: 1.2;
+    line-height: 120%;
     letter-spacing: 0.01em;
     white-space: nowrap;
     color: $color-primary;
@@ -122,8 +122,19 @@
 
   // .portfolio__link
   &__link {
-    line-height: 1.2;
+    line-height: 120%;
     color: #6cd153;
+    filter: hue-rotate(0deg) saturate(1);
+    transform: translateZ(0);
+
+    @include prefers-reduced-motion {
+      transition-property: filter;
+      transition-duration: 0.3s;
+    }
+
+    @include hover {
+      filter: hue-rotate(-15deg) saturate(1.05);
+    }
   }
 
   // .portfolio__title

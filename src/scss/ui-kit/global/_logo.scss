@@ -14,6 +14,20 @@
     --logo-icon-background: #{$color-button-gradient};
   }
 
+  &[href] {
+    filter: hue-rotate(0deg) saturate(1);
+    transform: translateZ(0);
+
+    @include prefers-reduced-motion {
+      transition-property: filter;
+      transition-duration: 0.3s;
+    }
+
+    @include hover {
+      filter: hue-rotate(-15deg) saturate(1.05);
+    }
+  }
+
   @media (min-width: #{900 + 0.1px}) {
     gap: vw-desktop(10);
     font-size: vw-desktop(20);

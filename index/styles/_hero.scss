@@ -98,7 +98,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: vw-desktop(40);
-  line-height: 1.2;
+  line-height: 120%;
   color: $color-black;
 
   @media (max-width: 900px) {

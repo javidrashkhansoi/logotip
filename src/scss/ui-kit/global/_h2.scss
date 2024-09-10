@@ -1,18 +1,14 @@
 .h2 {
-  font-size: vw-mobile(32);
-  line-height: 1.2;
+  font-size: vw-mobile(34);
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
 
   .light & {
     color: $color-primary;
   }
 
-  // .h2--expanded
-  &--expanded {
-    letter-spacing: 0.01em;
-    text-transform: uppercase;
-  }
-
   @media (min-width: #{900 + 0.1px}) {
-    font-size: vw-desktop(32);
+    font-size: vw-desktop(40);
   }
 }

@@ -15,24 +15,27 @@
   text-align: center;
   white-space: nowrap;
   color: $color-black;
-  background-image: linear-gradient(156deg, yellow 0%, #76dd52 25%, #15cd6c 75%, #18e779 100%);
+  background-image: linear-gradient(156deg, #76dd52 0%, #76dd52 25%, #15cd6c 75%, #15cd6c 100%);
   background-size: 150% 100%;
   background-position: 50% 0;
   background-repeat: no-repeat;
   border: 1px solid $color-accent;
   border-radius: calc(var(--button-border-radius, 15) / 20 * 1em);
+  filter: hue-rotate(0deg) saturate(1);
+  transform: translateZ(0);
 
   @include prefers-reduced-motion {
-    transition-property: background-position;
+    transition-property: background-position, filter;
     transition-duration: 0.3s;
   }
 
   @include hover {
     background-position: 0 0;
+    filter: hue-rotate(-15deg) saturate(1.05);
   }
 
   .light & {
-    background-image: linear-gradient(156deg, yellow 0%, #6fd44c 25%, #17c569 75%, #18e779 100%);
+    background-image: linear-gradient(156deg, #6fd44c 0%, #6fd44c 25%, #17c569 75%, #17c569 100%);
     background-position: 50% 0;
 
     @include hover {

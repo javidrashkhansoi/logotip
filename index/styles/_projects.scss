@@ -46,14 +46,6 @@
 
   // .projects__title
   &__title {
-    font-size: vw-mobile(34);
-    line-height: 1.2;
-    letter-spacing: 0.01em;
-    text-transform: uppercase;
-
-    @media (min-width: #{900 + 0.1px}) {
-      font-size: vw-desktop(40);
-    }
   }
 
   // .projects__caption
@@ -111,7 +103,7 @@
   // .projects-statistics__text
   &__text {
     font-size: vw-mobile(18);
-    line-height: 1.1;
+    line-height: 110%;
     letter-spacing: 0.02em;
     text-transform: uppercase;
     color: $color-primary;
@@ -174,8 +166,19 @@
     line-height: 1;
     border: 1px solid $color-black;
     border-radius: vw-mobile(16);
+    background-color: rgba(86, 86, 86, 0.3);
     backdrop-filter: blur(2px);
-    background: rgba(86, 86, 86, 0.3);
+    filter: hue-rotate(0deg) saturate(1);
+    transform: translateZ(0);
+
+    @include prefers-reduced-motion {
+      transition-property: filter;
+      transition-duration: 0.3s;
+    }
+
+    @include hover {
+      filter: hue-rotate(-15deg) saturate(1.05);
+    }
 
     @media (min-width: #{900 + 0.1px}) {
       grid-template-columns: vw-desktop(50) 1fr;
