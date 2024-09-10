@@ -96,6 +96,7 @@
   // .reviews-card__text
   &__text {
     font-size: vw-mobile(14);
+    line-height: 120%;
 
     @media (min-width: #{900 + 0.1px}) {
       font-size: vw-desktop(14);

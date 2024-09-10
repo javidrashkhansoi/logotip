@@ -204,6 +204,7 @@
     padding-block: vw-mobile(10) vw-mobile(24);
     padding-inline: vw-mobile(24);
     font-size: vw-mobile(14);
+    line-height: 120%;
 
     @media (min-width: #{900 + 0.1px}) {
       padding-block: vw-desktop(10) vw-desktop(24);

@@ -151,6 +151,7 @@
   // .team-card__text
   &__text {
     font-size: vw-mobile(14);
+    line-height: 120%;
     color: #7a7a7a;
 
     @media (min-width: #{900 + 0.1px}) {
