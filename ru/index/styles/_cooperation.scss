@@ -1,0 +1,133 @@
+.cooperation {
+  padding-block: vw-mobile(40);
+
+  @media (min-width: #{900 + 0.1px}) {
+    padding-block: vw-desktop(60);
+  }
+
+  // .cooperation__container
+  &__container {
+  }
+
+  // .cooperation__inner
+  &__inner {
+    @media (min-width: #{900 + 0.1px}) {
+      padding-inline: vw-desktop(100);
+    }
+  }
+
+  // .cooperation__header
+  &__header {
+    margin-block-end: vw-mobile(20);
+
+    @media (min-width: #{900 + 0.1px}) {
+      margin-block-end: vw-desktop(40);
+    }
+  }
+
+  // .cooperation__title
+  &__title {
+    margin-block-end: vw-mobile(10);
+
+    @media (min-width: #{900 + 0.1px}) {
+      margin-block-end: vw-desktop(10);
+    }
+  }
+
+  // .cooperation__text
+  &__text {
+    font-size: vw-mobile(16);
+    line-height: 1;
+
+    @media (min-width: #{900 + 0.1px}) {
+      font-size: vw-desktop(20);
+    }
+  }
+
+  // .cooperation__slider
+  &__slider {
+  }
+}
+
+.cooperation-slider {
+  user-select: none;
+  overflow: visible;
+
+  @media (max-width: 900px) {
+    padding-inline-end: vw-mobile(20);
+  }
+
+  // .cooperation-slider__wrapper
+  &__wrapper {
+  }
+
+  // .cooperation-slider__slide
+  &__slide {
+    block-size: auto;
+  }
+}
+
+.cooperation-card {
+  block-size: 100%;
+  padding-block: vw-mobile(20) vw-mobile(35);
+  padding-inline: vw-mobile(30);
+  line-height: 120%;
+  color: #444;
+  background-color: $color-white;
+  border-radius: vw-mobile(20);
+
+  @media (min-width: #{900 + 0.1px}) {
+    padding-block: vw-desktop(20) vw-desktop(35);
+    padding-inline: vw-desktop(30);
+    border-radius: vw-desktop(20);
+  }
+
+  // .cooperation-card__header
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: vw-mobile(20);
+    margin-block-end: vw-mobile(20);
+
+    @media (min-width: #{900 + 0.1px}) {
+      gap: vw-desktop(20);
+      margin-block-end: vw-desktop(20);
+    }
+  }
+
+  // .cooperation-card__title
+  &__title {
+    font-size: vw-mobile(24);
+    color: $color-black;
+
+    @media (min-width: #{900 + 0.1px}) {
+      font-size: vw-desktop(24);
+    }
+  }
+
+  // .cooperation-card__image
+  &__image {
+    flex: 0 0 auto;
+    inline-size: vw-mobile(80);
+    aspect-ratio: 80 / 70;
+    font-size: 0;
+
+    @media (min-width: #{900 + 0.1px}) {
+      inline-size: vw-desktop(80);
+    }
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  // .cooperation-card__text
+  &__text {
+    font-size: vw-mobile(16);
+
+    @media (min-width: #{900 + 0.1px}) {
+      font-size: vw-desktop(16);
+    }
+  }
+}

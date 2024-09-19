@@ -4,9 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "vite build --config vite.ru.config.js && vite build --config vite.en.config.js",
+    "dev-ru": "vite --config vite.ru.config.js",
+    "build-ru": "vite build --config vite.ru.config.js",
+    "preview-ru": "vite preview --config vite.ru.config.js",
+    "dev-en": "vite --config vite.en.config.js",
+    "build-en": "vite build --config vite.en.config.js",
+    "preview-en": "vite preview --config vite.en.config.js"
   },
   "devDependencies": {
     "@vitejs/plugin-legacy": "^5.4.1",

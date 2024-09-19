@@ -1,0 +1,142 @@
+.reviews {
+  padding-block: vw-mobile(40);
+
+  @media (min-width: #{900 + 0.1px}) {
+    padding-block: vw-desktop(60);
+  }
+
+  // .reviews__container
+  &__container {
+  }
+
+  // .reviews__inner
+  &__inner {
+    &:not(.glass--desktop) {
+      --glass-padding-top: #{vw-mobile(40)};
+      --glass-padding-bottom: #{vw-mobile(30)};
+
+      @media (min-width: #{900 + 0.1px}) {
+        --glass-padding-top: #{vw-desktop(80)};
+        --glass-padding-bottom: #{vw-desktop(60)};
+      }
+    }
+  }
+
+  // .reviews__title
+  &__title {
+    margin-block-end: vw-mobile(30);
+
+    @media (min-width: #{900 + 0.1px}) {
+      margin-block-end: vw-desktop(40);
+    }
+  }
+
+  // .reviews__slider
+  &__slider {
+  }
+}
+
+.reviews-slider {
+  user-select: none;
+  overflow: visible;
+
+  // .reviews-slider__wrapper
+  &__wrapper {
+  }
+
+  // .reviews-slider__slide
+  &__slide {
+    block-size: auto;
+  }
+}
+
+.reviews-card {
+  block-size: 100%;
+  padding: vw-mobile(30);
+  line-height: 120%;
+  background-color: #2e2e2e;
+  border-radius: vw-mobile(20);
+
+  @media (min-width: #{900 + 0.1px}) {
+    padding: vw-desktop(30);
+    border-radius: vw-desktop(20);
+  }
+
+  // .reviews-card__header
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: vw-mobile(5);
+    margin-block-end: vw-mobile(20);
+
+    @media (min-width: #{900 + 0.1px}) {
+      gap: vw-desktop(5);
+      margin-block-end: vw-desktop(20);
+    }
+  }
+
+  // .reviews-card__title
+  &__title {
+  }
+
+  // .reviews-card__cite
+  &__cite {
+    font-size: vw-mobile(16);
+
+    @media (min-width: #{900 + 0.1px}) {
+      font-size: vw-desktop(16);
+    }
+  }
+
+  // .reviews-card__stars
+  &__stars {
+  }
+
+  // .reviews-card__text
+  &__text {
+    font-size: vw-mobile(16);
+    line-height: 120%;
+
+    @media (min-width: #{900 + 0.1px}) {
+      font-size: vw-desktop(16);
+    }
+  }
+}
+
+.review-stars {
+  display: flex;
+  align-items: center;
+  gap: vw-mobile(4);
+  font-size: 0;
+
+  @media (min-width: #{900 + 0.1px}) {
+    gap: vw-desktop(4);
+  }
+
+  // .review-stars__item
+  &__item {
+    position: relative;
+    flex: 0 0 auto;
+    inline-size: vw-mobile(15);
+    aspect-ratio: 1 / 1;
+    background-color: #5e5c5c;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 15 15'%3E%3Cpath fill='%23FFB950' d='M7.02 1.46a.5.5 0 0 1 .96 0l1.1 3.38c.06.2.25.34.47.34h3.54a.5.5 0 0 1 .3.9l-2.87 2.1a.5.5 0 0 0-.18.55l1.1 3.37a.5.5 0 0 1-.78.56L7.8 10.58a.5.5 0 0 0-.58 0l-2.87 2.08a.5.5 0 0 1-.77-.56l1.1-3.37a.5.5 0 0 0-.19-.56L1.61 6.1a.5.5 0 0 1 .3-.9h3.54a.5.5 0 0 0 .48-.35l1.1-3.38Z'/%3E%3C/svg%3E");
+    mask-repeat: no-repeat;
+
+    &:not([style*="--star-grade"] ~ &) {
+      &::after {
+        content: "";
+        position: absolute;
+        inset-block: 0;
+        inset-inline-start: 0;
+        inline-size: var(--star-grade, 100%);
+        background-color: #ffb950;
+      }
+    }
+
+    @media (min-width: #{900 + 0.1px}) {
+      inline-size: vw-desktop(15);
+    }
+  }
+}

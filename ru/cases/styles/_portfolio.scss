@@ -1,0 +1,127 @@
+.portfolio {
+  padding-block: vw-mobile(60);
+
+  @media (min-width: #{900 + 0.1px}) {
+    padding-block: vw-desktop(60);
+  }
+
+  // .portfolio__container
+  &__container {
+  }
+
+  // .portfolio__block
+  &__block {
+    @media (min-width: #{900 + 0.1px}) {
+      padding-inline: vw-desktop(100);
+    }
+  }
+
+  // .portfolio__inner
+  &__inner {
+    --glass-padding-block: #{vw-desktop(60)};
+  }
+
+  // .portfolio__title
+  &__title {
+    --h1-font-size-mobile: #{vw-mobile(32)};
+    --h1-line-height: 1;
+
+    margin-block-end: vw-mobile(40);
+
+    @media (min-width: #{900 + 0.1px}) {
+      margin-block-end: vw-desktop(40);
+    }
+  }
+
+  // .portfolio__article
+  &__article {
+    font-size: vw-mobile(22);
+
+    > *:last-child {
+      margin-block-end: 0;
+    }
+
+    @media (min-width: #{900 + 0.1px}) {
+      font-size: vw-desktop(22);
+    }
+
+    p {
+      margin-block-end: vw-mobile(20);
+
+      &:first-child {
+        margin-block-end: vw-mobile(10);
+
+        @media (min-width: #{900 + 0.1px}) {
+          margin-block-end: vw-desktop(10);
+        }
+      }
+
+      @media (min-width: #{900 + 0.1px}) {
+        margin-block-end: vw-desktop(20);
+      }
+    }
+
+    div {
+      &:has(img) {
+        margin-block-end: vw-mobile(40);
+
+        @media (min-width: #{900 + 0.1px}) {
+          margin-block-end: vw-desktop(40);
+        }
+      }
+
+      &:not(:has(img:nth-child(2))) img {
+        border: 2px solid $color-border;
+        border-radius: vw-mobile(10);
+
+        @media (min-width: #{900 + 0.1px}) {
+          border-radius: vw-desktop(10);
+        }
+      }
+
+      &:has(img:nth-child(2)) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: vw-mobile(20);
+
+        @media (min-width: #{900 + 0.1px}) {
+          gap: vw-desktop(20);
+        }
+      }
+    }
+
+    img {
+      inline-size: 100%;
+    }
+
+    figcaption {
+      margin-block-start: vw-mobile(10);
+      font-size: vw-mobile(16);
+
+      @media (min-width: #{900 + 0.1px}) {
+        margin-block-start: vw-desktop(20);
+        font-size: vw-desktop(16);
+      }
+
+      a {
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        text-underline-position: under;
+      }
+    }
+  }
+
+  // .portfolio__link
+  &__link {
+    --button-width: 380;
+    --button-height: 75;
+    --button-border-radius: 16;
+
+    margin-block-start: vw-mobile(40);
+    margin-inline: auto;
+
+    @media (min-width: #{900 + 0.1px}) {
+      margin-block-start: vw-desktop(120);
+    }
+  }
+}

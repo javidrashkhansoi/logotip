@@ -45,7 +45,7 @@
 }
 
 .nav {
-  font-size: vw-mobile(18);
+  font-size: vw-mobile(20);
   line-height: 1;
   text-transform: uppercase;
   color: #c7c7c7;
@@ -59,7 +59,7 @@
   }
 
   @media (min-width: #{900 + 0.1px}) {
-    font-size: vw-desktop(18);
+    font-size: vw-desktop(20);
   }
 
   // .nav__inner
