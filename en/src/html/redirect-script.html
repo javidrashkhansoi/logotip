@@ -1,0 +1,13 @@
+<script id="script-redirect">
+  const { documentElement } = document;
+  const { dataset } = documentElement;
+  const { site = "https://new-studio-ru.pasha.design" } = dataset;
+  const redirectScript = document.getElementById("script-redirect");
+  /** @type {string} */
+  const userLanguage = navigator.language || navigator.userLanguage;
+
+  if (userLanguage.startsWith("ru")) window.location.href = site;
+
+  documentElement.removeAttribute("data-site");
+  redirectScript?.remove();
+</script>
