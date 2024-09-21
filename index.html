@@ -1,0 +1,56 @@
+<% if (mode==="ru" ) { %>
+  <!DOCTYPE html>
+  <html lang="ru">
+
+  <load src="/ru/index/head.html" title="Главная" />
+
+  <body>
+    <load src="/src/icons/icons.svg" />
+    <div class="wrapper">
+      <load src="/ru/index/header.html" />
+      <main class="main">
+        <load src="/ru/index/hero.html" />
+        <load src="/ru/index/projects.html" />
+        <load src="/ru/index/stack.html" />
+        <load src="/ru/index/specialization.html" />
+        <load src="/ru/index/cooperation.html" />
+        <load src="/ru/index/team.html" />
+        <load src="/ru/index/reviews.html" />
+        <load src="/ru/html/form.html" />
+      </main>
+      <load src="/ru/html/footer.html" />
+    </div>
+
+    <script type="module" src="index/index.js"></script>
+  </body>
+
+  </html>
+  <% } else if (mode==="en" ) { %>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <load src="/en/index/head.html" title="Main" />
+
+    <body>
+      <load src="/src/icons/icons.svg" />
+
+      <div class="wrapper">
+        <load src="/en/index/header.html" />
+        <main class="main">
+          <load src="/en/index/hero.html" />
+          <load src="/en/index/projects.html" />
+          <load src="/en/index/stack.html" />
+          <load src="/en/index/specialization.html" />
+          <load src="/en/index/cooperation.html" />
+          <load src="/en/index/team.html" />
+          <load src="/en/index/reviews.html" />
+          <load src="/en/html/form.html" />
+        </main>
+        <load src="/en/html/footer.html" />
+      </div>
+
+      <script type="module" src="index/index.js"></script>
+    </body>
+
+    </html>
+    <% } %>

@@ -1,20 +1,28 @@
-# Страницы
+# CITRUS.agency
 
-## GitHub Pages
+## Команды
+
+```bash
+npm run build # в режиме сборки (два проекта)
+```
 
 ### ru
 
-- [Главная](https://javidrashkhansoi.github.io/logotip/ru/)
-- [Портфолио](https://javidrashkhansoi.github.io/logotip/ru/portfolio/)
-- [fame.ru](https://javidrashkhansoi.github.io/logotip/ru/cases/fame)
+```bash
+npm run dev:ru # в режиме разработки
+npm run build:ru # в режиме сборки
+npm run preview:ru # в режиме предпросмотра
+```
 
 ### en
 
-- [Главная](https://javidrashkhansoi.github.io/logotip/en/)
-- [Портфолио](https://javidrashkhansoi.github.io/logotip/en/portfolio/)
-- [fame.ru](https://javidrashkhansoi.github.io/logotip/en/cases/fame)
+```bash
+npm run dev:en # в режиме разработки
+npm run build:en # в режиме сборки
+npm run preview:en # в режиме предпросмотра
+```
 
-## GitLab Pages
+## Страницы
 
 ### ru
 

@@ -31,7 +31,7 @@
     gap: vw-mobile(50);
 
     @media (min-width: #{900 + 0.1px}) {
-      gap: vw-desktop(200);
+      gap: vw-desktop(60);
     }
   }
 

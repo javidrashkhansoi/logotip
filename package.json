@@ -4,13 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "vite build --config vite.ru.config.js && vite build --config vite.en.config.js",
-    "dev-ru": "vite --config vite.ru.config.js",
-    "build-ru": "vite build --config vite.ru.config.js",
-    "preview-ru": "vite preview --config vite.ru.config.js",
-    "dev-en": "vite --config vite.en.config.js",
-    "build-en": "vite build --config vite.en.config.js",
-    "preview-en": "vite preview --config vite.en.config.js"
+    "build": "npm run build:ru && npm run build:en",
+    "dev:ru": "vite --mode ru",
+    "build:ru": "vite build --mode ru",
+    "preview:ru": "vite preview --mode ru",
+    "dev:en": "vite --mode en",
+    "build:en": "vite build --mode en",
+    "preview:en": "vite preview --mode en"
   },
   "devDependencies": {
     "@vitejs/plugin-legacy": "^5.4.1",
@@ -20,9 +20,8 @@
     "sharp": "^0.33.4",
     "swiper": "^11.1.10",
     "vite": "^5.4.1",
-    "vite-plugin-filter-replace": "^0.1.13",
+    "vite-plugin-ejs": "^1.7.0",
     "vite-plugin-html-inject": "^1.1.2",
-    "vite-plugin-image-optimizer": "^1.1.8",
-    "vite-plugin-minify": "^1.5.2"
+    "vite-plugin-image-optimizer": "^1.1.8"
   }
 }
